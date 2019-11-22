@@ -1,0 +1,14 @@
+version: '3'
+services:
+    webserver:
+        image: 3ch01c/lighttpd 
+        container_name: lighttpd
+        build:
+                context: .
+        volumes:
+                - ./www:/var/www/html
+                - ./config:/etc/lighttpd
+                - ./log:/var/log/lighttpd
+        ports:
+                - 8080:80
+                - 8443:443
