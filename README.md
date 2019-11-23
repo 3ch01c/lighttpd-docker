@@ -29,7 +29,7 @@ docker run -p 8080:80 -v ./www:/var/www/html 3ch01c/lighttpd
 
 ## Configuring Logging
 
-Re-run the container with the `log` directory mounted.
+If you want to have logs saved outside the container, re-run the container with the `log` directory mounted.
 
 ``` sh
 docker run -p 8080:80 -v ./log:/var/log/lighttpd 3ch01c/lighttpd
